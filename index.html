@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>My Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div>
+                <input id="display" type="text" disabled value="0">
+            </div>
+            <div>
+                <button class="other" id="reset" onclick="calc.reset()">AC</button>
+                <button class="other" id="remainder" onclick="calc.enterOper(this.id)">%</button>
+                <button class="other" id="back" onclick="calc.back()">←</button>
+                <button class="other" id="divide" onclick="calc.enterOper(this.id)">÷</button>
+            </div>
+            <div>
+                <button class="keypad" id="7" onclick="calc.enterDigit(this.id)">7</button>
+                <button class="keypad" id="8" onclick="calc.enterDigit(this.id)">8</button>
+                <button class="keypad" id="9" onclick="calc.enterDigit(this.id)">9</button>
+                <button class="other" id="multiply" onclick="calc.enterOper(this.id)">×</button>
+            </div>
+            <div>
+                <button class="keypad" id="4" onclick="calc.enterDigit(this.id)">4</button>
+                <button class="keypad" id="5" onclick="calc.enterDigit(this.id)">5</button>
+                <button class="keypad" id="6" onclick="calc.enterDigit(this.id)">6</button>
+                <button class="other" id="subtract" onclick="calc.enterOper(this.id)">-</button>
+            </div>
+            <div>
+                <button class="keypad" id="1" onclick="calc.enterDigit(this.id)">1</button>
+                <button class="keypad" id="2" onclick="calc.enterDigit(this.id)">2</button>
+                <button class="keypad" id="3" onclick="calc.enterDigit(this.id)">3</button>
+                <button class="other" id="add" onclick="calc.enterOper(this.id)">+</button>
+            </div>
+            <div>
+                <button class="keypad double" id="0" onclick="calc.enterDigit(this.id)">0</button>
+                <button class="keypad" id="decimal" onclick="calc.enterDecimal()">.</button>
+                <button class="equal" id="equal" onclick="calc.equal()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
